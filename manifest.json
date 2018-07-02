@@ -8,24 +8,23 @@
 
 	"content_scripts":[{
 		"matches":["<all_urls>"],
-		"js":["scripts/myscript.js"]
+		"js":["script.js"]
 	}],
 
 	"background":{
-		"scripts": ["scripts/background.js"]
+		"scripts": ["background.js"]
 	},
 
 	"browser_action": {
 		"default_icon": "images/icon.png",
 		"default_title": "Sandesh",
-		"default_popup": "newtab.html"
+		"default_popup": "index.html"
 	},
 
 	// "chrome_url_overrides" : {
 	// 	"newtab": "index.html"
 	// },
 
-	
 
 	"permissions": ["activeTab"]
 }
