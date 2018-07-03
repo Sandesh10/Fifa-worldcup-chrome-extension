@@ -1,3 +1,4 @@
+// list of countries with their abbrevation  
 var country_keys = '{"Argentina":"ar","France":"fr","Uruguay":"uy","Portugal":"pt",'+
                     '"Spain":"es","Russia":"ru","Croatia":"hr","Denmark":"dk",'+
                     '"Brazil":"br","Mexico":"mx","Belgium":"be","Japan":"jp",'+
@@ -25,7 +26,7 @@ function(err, data) {
   } else {
     if(!data.length){
       var text ='<div style="padding:5px;font-size:18px;text-align:center;">No Matches Today</div>'
-      document.getElementById("demo").innerHTML=text;
+      document.getElementById("match").innerHTML=text;
     }else{
     for(i = 0; i<data.length; i++){
     var play_time = data[i].time;
@@ -55,38 +56,36 @@ function(err, data) {
   text +='<div class="column" style="position:relative; margin-left:10%;float:left;width:80%;color:black">';
   text +='<div class="team_home" style="float:left;width: 48%">';
     text +='<div style="width:100%; float:right;text-align:right"><span class="team" id="home_team" \
-    style="width:70% text-align: right;font-size: 1em;">'+ data[i].home_team_country +'</span>';
+    style="width:70%;text-align: right;font-size: 1em;">'+ data[i].home_team_country +'</span>';
     // text +='<br><span>'+data[i].home_team_events[0].player+'</span>'
     if(!game_start){
       var team1 = data[i].home_team_country;
       sub = country_code[team1];
-      console.log(sub);
-      text +='<span class="flag-icon flag-icon-'+sub+'" style="float:right;font-size:1.5em; margin-left:.5em"></span>';
+      text +='<span class="flag-icon flag-icon-'+sub+'" style="float:right;margin-left:0.6em; font-size:1.5em"></span>';
     }else{  
-    text +='<div style="float:right;"><span class="goals" style="margin-left:1em; font-size: 1em; background-color: #FFF; border: none;height: 1.8em;min-width: 1.8em; color: black;  text-align: center; text-decoration: none;display: inline-block;margin-top:-1%">'+data[i].home_team.goals+'</span></div>';
+    text +='<div style="float:right;margin-left:1em;"><span class="goals" style="font-size: 1em; background-color: #FFF; border: none;height: 1.8em;min-width: 1.8em; color: black;  text-align: center; text-decoration: none;display: inline-block;margin-top:-1%">'+data[i].home_team.goals+'</span></div>';
     }
     text +='</div></div><span style="margin-left:2%;width:1%">-</span>';
     text +='<div class="team_away" style="float:right; width: 45%">';
     text +='<div style="width:100%; float:right; text-align:left">';
       if(!game_start){
       var team2 = data[i].away_team_country;
-      sub = country_code[team2];
-      console.log(sub); 
-      text +='<span class="flag-icon flag-icon-'+sub+'" style="float:left;font-size:1.5em; margin-right:.5em"></span>';
+      sub = country_code[team2]; 
+      text +='<span class="flag-icon flag-icon-'+sub+'" style="float:left;margin-right:0.6em;font-size:1.5em"></span>';
     }else{  
-    text +='<div style="float:left;"><span class="goals" style="margin-right:1em;font-size: 1em; background-color: #FFF; border: none;height: 1.8em;width: 1.8em; color: black;  text-align: center; text-decoration: none;display: inline-block;margin-top:-1%">'+
+    text +='<div style="float:left;margin-right:1em;"><span class="goals" style="font-size: 1em; background-color: #FFF; border: none;height: 1.8em;width: 1.8em; color: black;  text-align: center; text-decoration: none;display: inline-block;margin-top:-1%">'+
     data[i].away_team.goals+'</span></div>';
     } 
-    text +='<span class="team" id="away_team" style="text-align: left;font-size: 1em;">'+ data[i].away_team_country +'</span>';
+    text +='<span class="team" id="away_team" style="width:70%;text-align: left;font-size: 1em;">'+ data[i].away_team_country +'</span>';
     text +='</div>';
     text +='</div>';  
   text +='</div></div>';
   text +='<hr style="color:#fff;padding:0; margin:0">'
-  var d="demo"
+  var data_id="match"
   if(i>0 & i<data.length){
-    d+=i;
+    data_id+=i;
   } 
-  document.getElementById(d).innerHTML=text;
+  document.getElementById(data_id).innerHTML=text;
 
   }
   }}
