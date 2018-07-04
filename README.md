@@ -2,7 +2,7 @@
 
 Chrome extension to get world cup score updates in your browser
 
-	![Working Demo](https://github.com/Sandesh10/Scoreboard/blob/master/demo.gif)
+   ![Working Demo](https://github.com/Sandesh10/Scoreboard/blob/master/demo.gif)
 
 
 ## Getting Started
