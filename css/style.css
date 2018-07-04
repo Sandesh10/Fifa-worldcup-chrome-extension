@@ -1,0 +1,126 @@
+span{
+	margin-right: 1px;
+}
+
+
+.row_main{
+	display: block;
+    background-color: #1f324a;
+    color: #fff;
+    height: 1.2em;
+    padding: .5625em .625em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.row{
+	display: block;
+    background-color: #c3e6cb;
+    color: #fff;
+    height: 1.8em;
+    padding: .5625em .625em;
+    font-size: 1em;
+    text-transform: none;
+    line-height: 1.8em;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;	
+}
+
+
+.column{
+	float: left; 
+	display: inline;
+}
+
+
+.no_match_today{
+	padding:5px;
+	font-size:18px;
+	text-align:center;
+}
+
+.match_status{
+	margin-left:4%; 
+	background-color:#081f2c;
+	height:1.9em;
+	min-width: 2em;
+	text-align: center;
+	float: left;
+	color: #fff;
+	position: absolute;
+	top: .5em;
+}
+
+.score_column{
+	position:relative; 
+	margin-left:10%;
+	float:left;
+	width:80%;
+	color:black;
+}
+
+
+.team_home{
+	float:left;
+	width: 48%;
+}
+
+
+.team{
+	width:100%; 
+	float:right;
+	text-align:right;
+}
+
+
+#home_team{
+	width:70%;
+	text-align: right;
+	font-size: 1em;
+}
+
+
+#away_team{
+	width:70%;
+	text-align: left;
+	font-size: 1em;
+}
+
+
+.flash-button{
+	background:green;
+	padding:5px;
+	color:#fff;
+	border:none;
+	border-radius:5px;
+	
+	animation-name: flash;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	//Firefox 1+
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	//Safari 3-4
+	-moz-animation-name: flash;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+

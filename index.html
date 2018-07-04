@@ -1,135 +1,26 @@
 <!doctype html>
 <html>
   <head>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- <meta http-equiv="refresh" content="30"> -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css" />
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="css/mystyle.css"> -->
-	<script type="text/javascript" src="script.js"></script>
-    <title>Test</title>
-
-    <style type="text/css">
-    	.column {
-    /*float: left;
-    text-align: :left;
-    padding: 10px;*/
- /* Should be emoved. Only for demonstration */
-}
-
-.row_main{
-	display: block;
-    background-color: #1f324a;
-    color: #fff;
-    height: 1.2em;
-    padding: .5625em .625em;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    line-height: 1.5em;
-    font-weight: 600;
-    position: relative;
-    text-decoration: none;
-}
-
-.row{
-	display: block;
-    background-color: #c3e6cb;
-    color: #fff;
-    height: 1.8em;
-    padding: .5625em .625em;
-    font-size: 1em;
-    text-transform: none;
-    line-height: 1.8em;
-    position: relative;
-    text-decoration: none;
-    font-weight: 500;	
-}
-/* Clear floats after the columns */
-
-span{
-	margin-right: 1px;
-}
-
-.flash-button{
-	background:green;
-	padding:5px;
-	color:#fff;
-	border:none;
-	border-radius:5px;
-	
-	animation-name: flash;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-
-	//Firefox 1+
-	-webkit-animation-name: flash;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-iteration-count: infinite;
-
-	//Safari 3-4
-	-moz-animation-name: flash;
-	-moz-animation-duration: 1s;
-	-moz-animation-timing-function: linear;
-	-moz-animation-iteration-count: infinite;
-}
-
-@keyframes flash {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1.0; }
-}
-    </style>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="refresh" content="30">
+  	
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css" />
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" /> -->
+	  <link rel="stylesheet" type="text/css" href="css/flag-icon.css">
+    <link rel="stylesheet" type="text/css" href="css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="script.js"></script>
   </head>
+
   <body> 
-
-<div style="width:40%;min-width:400px;margin: 0 auto">
-
-<div class="row_main">
-	<div> World Cup</div>
-</div>	
-<div id="match">Loading</div>
-<div id="match1"></div>
-<div id="match2"></div>
-<!-- <div id="demo1"></div>
-<div id="demo2"></div>
-<div id="demo3"></div>
- -->	</div>
-</body>
-
+    <div style="width:40%;min-width:400px;margin: 0 auto">
+      <div class="row_main">
+	       <div> World Cup</div>
+      </div>	
+      <div id="match">Loading</div>
+      <div id="match1"></div>
+      <div id="match2"></div>
+    </div>
+  </body>
+  
 </html>
-
-
-
-<!-- var game_end= false
-    last_updated_date = data[i].last_score_update_at.split("T");
-    console.log(last_updated_date)
-    last_update_date = last_updated_date[0].split("-") 
-    last_update_time = last_updated_date[1].split("Z")[0].slice(0,5);
-    nst_converted = convert_time(last_update_time).split(":")
-    last_updated = new Date(last_update_date[0], last_update_date[1], last_update_date[2],nst_converted[0],nst_converted[1]);
-
-    current_time = new Date();
-    if(last_updated.getDate()==current_time.getDate()){
-      updated_min = last_updated.getHours()*60+last_updated.getMinutes();
-      current_min = current_time.getHours()*60+current_time.getMinutes();
-      diff_min = current_min - updated_min
-      if(diff_min>=4 && play_time.split("'+")[0]=="90"){
-        game_end = true;
-      }
-    }
-    var text ='<div class="row">';
-  text +='<div class="column" style="float: left; display: inline;">';
-  if(data[i].time!=null){
-    console.log("xoxo")
-    if((game_start== true)&& (game_end== false)){
-      console.log("Hello")
-    text +='<div><button style="vertical-align:middle" type="radio" class="flash-button"/></div>';
-    }else{
-      console.log("Bitch")
-      play_time="FT"
-    }
-  }
- -->
