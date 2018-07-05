@@ -1,3 +1,3 @@
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
-    chrome.tabs.executeScript(null,{file:"script.js"});
+    chrome.tabs.executeScript(null,{file:"scripts/script.js"});
 });
