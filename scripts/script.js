@@ -22,7 +22,7 @@ var getJSON = function(url, callback) {
 
 
 
-getJSON('https://worldcup.sfg.io/matches/tomorrow',
+getJSON('https://worldcup.sfg.io/matches/today',
 function(err, data) {
     if (err !== null) {
         alert('Something went wrong: ' + err);
