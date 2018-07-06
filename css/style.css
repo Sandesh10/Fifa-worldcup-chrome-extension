@@ -60,7 +60,6 @@ span{
 .score_column{
 	position:relative; 
 	margin-left:10%;
-	float:left;
 	width:80%;
 	color:black;
 }
