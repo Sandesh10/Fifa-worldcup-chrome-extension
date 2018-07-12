@@ -1,5 +1,29 @@
+html,
+body {
+  margin: 1px;
+  padding: 0;
+}
+
+
+button{
+	vertical-align:middle;
+}
+
+
 span{
 	margin-right: 1px;
+}
+
+
+img{
+	vertical-align:middle;
+}
+
+
+.container{
+	position: relative;
+	height: auto !important;
+	min-height: 100%;
 }
 
 
@@ -20,20 +44,17 @@ span{
 
 .row{
 	display: block;
-    background-color: #c3e6cb;
-    color: #fff;
-    height: 1.8em;
-    padding: .5625em .625em;
-    font-size: 1em;
-    text-transform: none;
-    line-height: 1.8em;
-    position: relative;
-    text-decoration: none;
+	background-color: #c3e6cb;    /*#C3E5BB*/
+  	color: #000;
+  	padding: .5625em .625em;
+  	font-size: 1em; 
+  	line-height:1.8em;
+  	text-transform: none;
     font-weight: 500;	
 }
 
 
-.column{
+.time_column{
 	float: left; 
 	display: inline;
 }
@@ -48,7 +69,8 @@ span{
 .match_status{
 	margin-left:4%; 
 	background-color:#081f2c;
-	height:1.9em;
+	height:auto !important;
+	/*min-height: 100%;*/
 	min-width: 2em;
 	text-align: center;
 	float: left;
@@ -57,17 +79,24 @@ span{
 	top: .5em;
 }
 
+.play_time{
+	padding: 0 5px;
+}
+
 .score_column{
 	position:relative; 
 	margin-left:10%;
 	width:80%;
 	color:black;
+	height: auto;
+	min-height: 100%;
 }
 
 
 .team_home{
 	float:left;
 	width: 48%;
+	display: inline;
 }
 
 
@@ -75,6 +104,14 @@ span{
 	width:100%; 
 	float:right;
 	text-align:right;
+	display: inline;
+}
+
+
+.team_away{
+	display:inline;
+	float:right; 
+	width: 46%;
 }
 
 
@@ -91,6 +128,56 @@ span{
 	font-size: 1em;
 }
 
+
+.home_flag{
+	float:right;
+	margin-left:0.6em; 
+	font-size:1.5em;
+}
+
+.away_flag{
+	float:left;
+	margin-right:0.6em;
+	font-size:1.5em;
+}
+
+
+.goals{
+	font-size: 1em; 
+	background-color: #FFF;
+	border: none;
+	height: 1.8em;
+	min-width: 1.8em; 
+	color: black;  
+	text-align: center; 
+	text-decoration: none; 
+	display: inline-block; 
+	margin-top:-1%;
+}
+
+
+.home_penalties{
+	float:right; 
+	margin-left:0.5em;
+}
+
+
+.away_penalties{
+	float:left; 
+	margin-right:0.5em;
+}
+
+
+.description{
+	font-size:0.9em;
+	display: block;
+	padding:1em;
+	line-height:1em;
+	height:100%;
+	text-transform: none;
+	font-weight: 400;
+	height:auto;
+}
 
 .flash-button{
 	background:green;

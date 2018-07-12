@@ -27,7 +27,7 @@ Chrome extension to get world cup score updates in your browser
       - Navigate to the cloned folder and select Ok.  
           For additional help, please refer to [Official Guide for Chrome](https://developer.chrome.com/extensions/getstarted#unpacked)  
 
-          ![How to install](https://github.com/Sandesh10/Scoreboard/blob/master/howto.png)
+          ![How to install](https://github.com/Sandesh10/Scoreboard/blob/master/images/howto.png)
           
 ### Local Development
  - Follow the installation instructions and install the extension.
