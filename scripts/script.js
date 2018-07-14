@@ -159,11 +159,11 @@ function(err, data) {
 	                	text +='<div style="float:right;margin-left:1em;"><span style="font-size: 1em;padding-right:0.55em">';
 	                	
 	                	if(home_event_type=="yellow-card"){
-	                		text += '<img src="yellow.png">';
+	                		text += '<img src="images/yellow.png">';
 	                	}else if(home_event_type=="red-card"){
-	                		text += '<img src="red.png">';
+	                		text += '<img src="images/red.png">';
 	                	}else if(home_event_type.includes("goal")){
-	                		text += '<img style="margin-left:-3px;" width="15px" height="auto" src="epn.png">';	
+	                		text += '<img style="margin-left:-3px;" width="15px" height="auto" src="images/goal.png">';	
 	                	}       
 	                	//inner if-else ends 
 
@@ -178,7 +178,7 @@ function(err, data) {
 	                	}else if(away_event_type=="red-card"){
 	                		text += '<img src="images/red.png">';
 	                	}else if(away_event_type.includes("goal")){
-	                		text += '<img style="margin-left:-3px;" width="15px" height="auto" src="images/goal.png">';	
+	                		text += '<img style="margin-left:-3px;" src="images/goal.png">';	
 	                	}
 	                	//inner if-else ends
 
