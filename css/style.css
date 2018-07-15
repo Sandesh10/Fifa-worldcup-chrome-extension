@@ -171,7 +171,7 @@ img{
 .description{
 	font-size:0.9em;
 	display: block;
-	padding:1em;
+	padding: 0.9em 1em;
 	line-height:1em;
 	height:100%;
 	text-transform: none;

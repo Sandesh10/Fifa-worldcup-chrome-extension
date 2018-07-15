@@ -116,15 +116,14 @@ function(err, data) {
                 //--------------------------score column ends------------------------------
 
 
-                // text +='<hr style="border-color:#e4e4e4;padding:0;margin-bottom:-1px;">'
-
-
                 //=======================================DETAILS SECTION==========================================
                 event_count = count_max_events(data[i].home_team_events.length, data[i].away_team_events.length)
 
                 for(var c=0;c<event_count;c++){
                 	var image;
-                	
+                	if(c=='0'){
+                        text +='<hr style="border-color:#fff;padding:0;margin-bottom:-0.5em;">';
+                    }
                 	try{
                 		home_event_type = data[i].home_team_events[c].type_of_event;	
                 	}catch(err){
@@ -149,21 +148,70 @@ function(err, data) {
 	                	away_event_player = "";
 	                }
 	                
+                    
+                    if ((away_event_type=="goal-own")){
+                        
+                        text +='<div class="description">';
+                        text +='<div class="team_home"><div class="team">';
+                        text +='<span id="home_team" style="color:red">'+away_event_player+' [O.G]</span>';
+                        text +='<div style="float:right;margin-left:1em;"><span style="font-size: 1em;padding-right:0.55em">';
+                            
+                        if(away_event_type=="goal-own"){
+                            text += '<img style="margin-right:-3px;" width="15px" height="auto" src="images/goal.png">'; 
+                        }       
+
+                        text +='</span></div></div></div>'; //team ends , team home ends
+
+                        text +='<div class="team_away"><div style="width:100%; float:right; text-align:left"> \
+                                <span id="away_team"></span>';
+                        text +='<div style="float:left;margin-right:1em;"><span style="font-size: 1em;padding-left:0.55em">';
+
+                        text +='</span></div>'
+                        text +='</div></div></div>';
+                        c+=1
+                        away_event_player = (c<data[i].away_team_events.length? data[i].away_team_events[c].player : '' );
+                        away_event_type = (c<data[i].away_team_events.length? data[i].away_team_events[c].type_of_event : '' );
+                        }
+
+                    else if ((home_event_type=="goal-own")){
+                        
+                        text +='<div class="description">';
+                        text +='<div class="team_home"><div class="team">';
+                        text +='<span id="home_team" ></span>';
+                        text +='<div style="float:right;margin-left:1em;"><span style="font-size: 1em;padding-right:0.55em">';
+                        text +='</span></div></div></div>'; //team ends , team home ends
+
+                        text +='<div class="team_away"><div style="width:100%; float:right; text-align:left"> \
+                                <span id="away_team" style="color:red">'+home_event_player+' [O.G]</span>';
+                        text +='<div style="float:left;margin-right:1em;"><span style="font-size: 1em;padding-left:0.55em">';
+                        if(home_event_type=="goal-own"){
+                            text += '<img style="margin-right:-3px;" width="15px" height="auto" src="images/goal.png">'; 
+                        }
+                        text +='</span></div>'
+                        text +='</div></div></div>';
+                        c+=1
+                        home_event_player = (c<data[i].home_team_events.length? data[i].home_team_events[c].player : '' );
+                        home_event_type = (c<data[i].home_team_events.length? data[i].home_team_events[c].type_of_event : '' );
+                        }    
+
 	                //If both players are substituted then skip the loop
 	                if((home_event_player === "")&&(away_event_player === "")){
 	                	continue;
-	                }else{ 
+	                }
+                    else{
+                        
 	                	text +='<div class="description">';
 	                	text +='<div class="team_home"><div class="team">';
-	                	text +='<span id="home_team">'+home_event_player+'</span>';
+	                	
+                        text +='<span id="home_team">'+home_event_player+'</span>';
 	                	text +='<div style="float:right;margin-left:1em;"><span style="font-size: 1em;padding-right:0.55em">';
 	                	
 	                	if(home_event_type=="yellow-card"){
 	                		text += '<img src="images/yellow.png">';
 	                	}else if(home_event_type=="red-card"){
-	                		text += '<img src="images/red.png">';
+	                		text += '<img src="images/red.png">';    
 	                	}else if(home_event_type.includes("goal")){
-	                		text += '<img style="margin-left:-3px;" width="15px" height="auto" src="images/goal.png">';	
+	                		text += '<img style="margin-right:-3px;" width="15px" height="auto" src="images/goal.png">';	
 	                	}       
 	                	//inner if-else ends 
 
@@ -178,7 +226,7 @@ function(err, data) {
 	                	}else if(away_event_type=="red-card"){
 	                		text += '<img src="images/red.png">';
 	                	}else if(away_event_type.includes("goal")){
-	                		text += '<img style="margin-left:-3px;" src="images/goal.png">';	
+	                		text += '<img style="margin-left:-3px;" width="15px" height="auto" src="images/goal.png">';	
 	                	}
 	                	//inner if-else ends
 
@@ -191,7 +239,6 @@ function(err, data) {
                 text +='</div></div>';
                 // --------------------- row class ends here ------------------------------------------
                 //---------------------- container class ends here ------------------------------------  
-                text +='<hr style="border-color:#fff;padding:0; margin:0">'
                 
                 var data_id="match"
                 if(i>0 & i<data.length){
