@@ -3,7 +3,10 @@
 Chrome extension to get world cup score updates in your browser
 
    ![Working Demo](https://github.com/Sandesh10/Scoreboard/blob/master/demo.gif)
+   
+(Update): Now you can see the crucial match events such as: goal scorers, yellow cards and red cards.
 
+   ![Detailed Scorecard](https://github.com/Sandesh10/Scoreboard/blob/master/detailed_scorecard.png)
 
 ## Getting Started
 
