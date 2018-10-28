@@ -1,4 +1,4 @@
-# Scoreboard
+# Fifa Worldcup 2018 Scoreboard
 
 Chrome extension to get world cup score updates in your browser
 
